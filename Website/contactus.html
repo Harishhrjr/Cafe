@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f1e8;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            background-color: #000;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's chat</h1>
+    <div class="container">
+        <div class="info">
+            <h2>Café Rouge Bistro</h2>
+            <strong>Chinatown / Nob Hill</strong><br>
+            1030 Washington Street<br>
+            San Francisco<br><br>
+            
+            caferougebistro@gmail
+        </div>
+        <form id="contactForm">
+            <div class="form-group">
+                <label>Name (required)</label><br>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label>Email (required)</label><br>
+                <input type="email" required>
+            </div>
+            <div class="form-group">
+                <label>I'm interested in...</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Espresso Pop-Up</label>
+                    <label><input type="checkbox"> Office Coffee Program</label>
+                    <label><input type="checkbox"> Consulting</label>
+                    <label><input type="checkbox"> Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Message (required)</label><br>
+                <textarea rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+        });
+    </script>
+</body>
+</html>
+
